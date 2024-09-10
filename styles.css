@@ -1,0 +1,193 @@
+/* Variables for consistent theming */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #45a049;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --header-color: #fff;
+    --footer-color: #333;
+    --font-main: 'Arial', sans-serif;
+    --font-header: 'Helvetica', sans-serif;
+    --box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Base styles */
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--header-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    font-family: var(--font-header);
+    margin: 0;
+}
+
+/* Navigation styles */
+nav {
+    background-color: var(--footer-color);
+    color: var(--header-color);
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+
+    color: var(--header-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav ul li a i {
+    margin-right: 5px;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--header-color);
+    box-shadow: var(--box-shadow);
+}
+
+/* Map container styles */
+#map-container {
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--header-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--footer-color);
+    color: var(--header-color);
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-media a {
+    color: var(--header-color);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: var(--primary-color);
+}
+
+.contact-info {
+    margin: 0;
+}
+
+/* Animation classes */
+.animated-text {
+    animation: fadeInUp 1s ease-out;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Keyframe animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .social-media, .contact-info {
+        margin-top: 10px;
+    }
+}
